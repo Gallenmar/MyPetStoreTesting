@@ -37,9 +37,15 @@ public class LogUtility {
 
     public static void takeScreenshot(WebDriver driver, String testName) {
         try {
+            // Wait for 2 seconds before taking the screenshot
+            Thread.sleep(2000);
+
             File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(screenshotFile, new File("Logs/" + testName + " screenshot.png"));
             log("Screenshot for " + testName + " saved successfully.");
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            log("Thread was interrupted: " + e.getMessage());
         } catch (Exception e) {
             log("Failed to take screenshot: " + e.getMessage());
         }
