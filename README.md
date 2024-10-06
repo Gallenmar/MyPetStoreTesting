@@ -29,5 +29,10 @@ Tests the error handling when attempting to register with an email that has alre
 ## File Structure
 All the tests are in the src/test/java/MyTests directory. The main tests are in PSTestNGlog.java file in Mytests package. The LogUtility class is created for logging test procedure in Logs directory.
 
+
+![image](https://github.com/user-attachments/assets/7a3f56e4-e6ef-4162-93d1-e8584aecd7da)
+
 ## License
 This project is licensed under the MIT License.
+
+
